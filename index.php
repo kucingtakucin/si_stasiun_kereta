@@ -32,7 +32,7 @@
                         <a class="dropdown-item" href="#">Settings</a>
                         <a class="dropdown-item" href="#">Activity Log</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="dist/login.html">Logout</a>
+                        <a class="dropdown-item" href="Auth/login.html">Logout</a>
                     </div>
                 </li>
             </ul>
@@ -42,15 +42,26 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="index.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
                             
-                            <a class="nav-link" href="dist/tables.html">
+                            <a class="nav-link" href="Admin/Stasiun">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
+                                Stasiun
+                            </a>
+                            <a class="nav-link" href="Admin/Kereta">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Kereta
+                            </a>
+                            <a class="nav-link" href="Admin/Tiket">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tiket
+                            </a>
+                            <a class="nav-link" href="Admin/Penumpang">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Penumpang
                             </a>
                         </div>
                     </div>
@@ -66,36 +77,36 @@
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Stasiun</div>
+                                    <div class="card-body font-weight-bold">Stasiun</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="http://localhost/stasiun/Admin/Stasiun/index.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Kereta</div>
+                                    <div class="card-body font-weight-bold">Kereta</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="http://localhost/stasiun/Admin/Kereta/index.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Tiket</div>
+                                    <div class="card-body font-weight-bold">Tiket</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="http://localhost/stasiun/Admin/Tiket/index.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Penumpang</div>
+                                    <div class="card-body font-weight-bold">Penumpang</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="http://localhost/stasiun/Admin/Penumpang/index.php">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
