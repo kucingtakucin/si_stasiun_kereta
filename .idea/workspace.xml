@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a1e6d2-e020-4297-9569-2a7d0ad88f37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/Database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kereta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/penumpang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stasiun.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tiket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/401.html" beforeDir="false" afterPath="$PROJECT_DIR$/401.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/password.html" beforeDir="false" afterPath="$PROJECT_DIR$/password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/tables.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/layouts/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Stasiun/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Stasiun/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Stasiun.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Stasiun.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +16,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -40,6 +35,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -51,6 +47,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -58,7 +55,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Auth" />
+      <recent name="$PROJECT_DIR$/Admin/Tiket" />
+      <recent name="$PROJECT_DIR$/Admin/Penumpang" />
+      <recent name="$PROJECT_DIR$/Admin/Stasiun" />
+      <recent name="$PROJECT_DIR$/Admin/Kereta" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -70,10 +71,17 @@
       <option name="presentableId" value="Default" />
       <updated>1608105514500</updated>
       <workItem from="1608105527618" duration="5339000" />
+      <workItem from="1608265287886" duration="6640000" />
+      <workItem from="1608467578845" duration="862000" />
+      <workItem from="1608514179526" duration="1847000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
