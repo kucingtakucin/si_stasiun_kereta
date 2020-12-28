@@ -82,4 +82,38 @@
             }
         })
     });
+
+    let penumpang_success = $(".penumpang-success").data('isi');
+    let penumpang_fail = $(".penumpang-fail").data('isi');
+    if (penumpang_success) {
+        Swal.fire({
+            title: 'Data Penumpang',
+            text: `${penumpang_success}`,
+            icon: 'success'
+        })
+    }
+    if (penumpang_fail) {
+        Swal.fire({
+            title: 'Data Penumpang',
+            text: `${penumpang_fail}`,
+            icon: 'danger'
+        })
+    }
+
+    $('.tombolHapusPenumpang').click(function (event) {
+        event.preventDefault()
+        Swal.fire({
+            title: 'Apakah Kamu Yakin?',
+            text: 'Data Penumpang Akan Segera Dihapus!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes'
+        }).then(result => {
+            if (result.value) {
+                $(this).parent().submit()
+            }
+        })
+    });
 })(jQuery);
