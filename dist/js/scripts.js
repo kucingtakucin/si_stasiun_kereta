@@ -15,7 +15,7 @@
         $("body").toggleClass("sb-sidenav-toggled");
     });
 
-    let stasiun_success = $(".stasiun-success").data('isi');
+    let stasiun_success = $(".stasiun-success").data('isi'); // Berhasil ditambahkan
     let stasiun_fail = $(".stasiun-fail").data('isi');
     if (stasiun_success) {
         Swal.fire({

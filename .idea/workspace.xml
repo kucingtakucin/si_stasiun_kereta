@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a1e6d2-e020-4297-9569-2a7d0ad88f37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Admin/layouts/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/layouts/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/stasiun.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stasiun.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/Stasiun/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Stasiun/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Stasiun.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Stasiun.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/scripts.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +32,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -73,7 +72,9 @@
       <workItem from="1608105527618" duration="5339000" />
       <workItem from="1608265287886" duration="6640000" />
       <workItem from="1608467578845" duration="862000" />
-      <workItem from="1608514179526" duration="1847000" />
+      <workItem from="1608514179526" duration="11356000" />
+      <workItem from="1608542314243" duration="123000" />
+      <workItem from="1608626741493" duration="3735000" />
     </task>
     <servers />
   </component>
