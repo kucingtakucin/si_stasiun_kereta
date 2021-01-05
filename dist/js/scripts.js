@@ -49,6 +49,40 @@
         })
     });
 
+    let tiket_success = $(".tiket-success").data('isi'); // Berhasil ditambahkan
+    let tiket_fail = $(".tiket-fail").data('isi');
+    if (tiket_success) {
+        Swal.fire({
+            title: 'Data tiket',
+            text: `${tiket_success}`,
+            icon: 'success'
+        })
+    }
+    if (tiket_fail) {
+        Swal.fire({
+            title: 'Data tiket',
+            text: `${tiket_fail}`,
+            icon: 'danger'
+        })
+    }
+
+    $('.tombolHapustiket').click(function (event) {
+        event.preventDefault()
+        Swal.fire({
+            title: 'Apakah Kamu Yakin?',
+            text: 'Data tiket Akan Segera Dihapus!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes'
+        }).then(result => {
+            if (result.value) {
+                $(this).parent().submit()
+            }
+        })
+    });
+
     let kereta_success = $(".kereta-success").data('isi');
     let kereta_fail = $(".kereta-fail").data('isi');
     if (kereta_success) {

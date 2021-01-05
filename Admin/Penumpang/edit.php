@@ -1,8 +1,9 @@
 <?php require_once "../../core/Penumpang.php";
 require_once "../../core/Stasiun.php";
+require_once "../../core/Kereta.php";
 $penumpang = new Penumpang();
 $stasiun = new Stasiun();
-
+$kereta = new Kereta();
 
 $data = $penumpang->fetch($_GET['id_penumpang']);
 require_once "../layouts/header.php" ?>
@@ -27,16 +28,50 @@ require_once "../layouts/header.php" ?>
             <div class="form-group">
                 <label for="id_kereta">Nama Kereta</label>
                 <select id="id_kereta" class="form-control custom-select" name="id_kereta" >
-                    <?php foreach($kereta->fetchAll() as $item): ?>
-                        <option value="<?= $item->id_kereta?>"><?= $item->nama_kereta ?></option>
+                    <?php foreach ($kereta->fetchAll() as $item): ?>
+                        <option value="<?= $item->id_kereta ?>"><?= $item->nama_kereta ?></option>
                     <?php endforeach ?>
                 </select>
             </div>
             <div class="form-group">
-                <label for="id_stasiun">Nama Stasiun</label>
-                <select id="id_stasiun" class="form-control custom-select" name="id_stasiun" >
-                    <?php foreach($stasiun->fetchAll() as $item): ?>
-                        <option value="<?= $item->id_stasiun?>"><?= $item->nama_stasiun ?></option>
+                <label for="id_stasiun">Stasiun Keberangkatan</label>
+                <select id="id_stasiun" class="form-control custom-select" name="id_stasiun_keberangkatan" >
+                    <!--
+                    [
+                        {
+                            nama_stasiun: "...".
+                            alamat_stasiun: "..."
+                        },
+                        {
+                            nama_stasiun: "...".
+                            alamat_stasiun: "..."
+                        },
+                    ]
+                    -->
+                    <option value="<?= $data->id_stasiun_keberangkatan ?>"><?= $data->berangkat ?></option>
+                    <?php foreach($stasiun->fetchAll() as $item ): ?>
+                        <option value="<?= $item->id_stasiun ?>"><?= $item->nama_stasiun ?></option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="id_stasiun">Stasiun Tujuan</label>
+                <select id="id_stasiun" class="form-control custom-select" name="id_stasiun_tiba" >
+                    <!--
+                    [
+                        {
+                            nama_stasiun: "...".
+                            alamat_stasiun: "..."
+                        },
+                        {
+                            nama_stasiun: "...".
+                            alamat_stasiun: "..."
+                        },
+                    ]
+                    -->
+                    <option value="<?= $data->id_stasiun_tiba ?>"><?= $data->tiba ?></option>
+                    <?php foreach($stasiun->fetchAll() as $item ): ?>
+                        <option value="<?= $item->id_stasiun ?>"><?= $item->nama_stasiun ?></option>
                     <?php endforeach ?>
                 </select>
             </div>

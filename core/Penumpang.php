@@ -10,7 +10,7 @@ class Penumpang extends Database {
 
     public function fetch(string $id_penumpang)
     {
-        $this->stmt = $this->dbh->prepare("SELECT * FROM penumpang WHERE id_penumpang = :id_penumpang");
+        $this->stmt = $this->dbh->prepare("SELECT *, stasiun1.nama_stasiun AS berangkat, stasiun2.nama_stasiun AS tiba FROM penumpang JOIN stasiun AS stasiun1 ON penumpang.id_stasiun_keberangkatan = stasiun1.id_stasiun JOIN stasiun AS stasiun2 ON penumpang.id_stasiun_tiba = stasiun2.id_stasiun JOIN kereta ON penumpang.id_kereta = kereta.id_kereta WHERE id_penumpang = :id_penumpang");
         $this->stmt->bindValue('id_penumpang', $id_penumpang, PDO::PARAM_INT);
         $this->stmt->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);

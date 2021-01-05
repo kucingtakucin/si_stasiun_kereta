@@ -15,9 +15,8 @@ class Stasiun extends Database {
 
     /**
      * @param string $id_stasiun
-     * @return object
      */
-    public function fetch(string $id_stasiun): object
+    public function fetch(string $id_stasiun)
     {
         $this->stmt = $this->dbh->prepare("SELECT * FROM stasiun WHERE id_stasiun = :id_stasiun");
         $this->stmt->bindValue('id_stasiun', $id_stasiun, PDO::PARAM_INT);
