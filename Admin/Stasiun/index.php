@@ -41,6 +41,7 @@ endif; ?>
                 Data Stasiun
             </div>
             <div class="card-body">
+                <!-- Button buat tambah data -->
                 <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#stasiunModal">Tambah Data Stasiun</button>
                 <div class="table-responsive">
                     <table class="table table-bordered table-dark" id="dataTable">
