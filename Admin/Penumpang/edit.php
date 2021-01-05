@@ -2,7 +2,8 @@
 require_once "../../core/Stasiun.php";
 $penumpang = new Penumpang();
 $stasiun = new Stasiun();
-// $kereta = new Kereta();
+
+
 $data = $penumpang->fetch($_GET['id_penumpang']);
 require_once "../layouts/header.php" ?>
 <main>

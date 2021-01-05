@@ -1,13 +1,13 @@
 <?php require_once('Database.php');
 
-class Stasiun extends Database {
+class Tiket extends Database {
 
     /**
      * @return array
      */
     public function fetchAll(): array
     {
-        $this->stmt = $this->dbh->query("SELECT * FROM stasiun");  
+        $this->stmt = $this->dbh->query("SELECT * FROM tiket JOIN kereta ON kereta.id_kereta = tiket.id_kereta JOIN penumpang ON penumpang.id_penumpang = tiket.id_tiket");
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
@@ -17,19 +17,20 @@ class Stasiun extends Database {
      */
     public function fetch(string $id_stasiun): object
     {
-        $this->stmt = $this->dbh->prepare("SELECT * FROM stasiun WHERE id_stasiun = :id_stasiun");
+        $this->stmt = $this->dbh->prepare("SELECT * FROM tiket WHERE id_tiket = :id_tiket");
         $this->stmt->bindValue('id_stasiun', $id_stasiun, PDO::PARAM_INT);
         $this->stmt->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
 
+    // bindValue => Menghindari SQL Injection
     /**
      * @param array $data
      * @return bool
      */
     public function insert(array $data): bool
     {
-        $this->stmt = $this->dbh->prepare('INSERT INTO tiket (id_tiket, id_penumpang,stasiun_asal,stasiun_tujuan,id_kereta,berangkat,tiba,durasi,harga,status,jumlah) VALUES (:id_tiket, :id_penumpang, :stasiun_asal, :stasiun_tujuan, :id_kereta, :berangkat, :tiba, :durasi, :harga, :statu, :jumlah)');
+        $this->stmt = $this->dbh->prepare('INSERT INTO tiket (id_tiket, id_penumpang,stasiun_asal,stasiun_tujuan,id_kereta,berangkat,tiba,durasi,harga,status,jumlah) VALUES (:id_tiket, :id_penumpang, :stasiun_asal, :stasiun_tujuan, :id_kereta, :berangkat, :tiba, :durasi, :harga, :status, :jumlah)');
         $this->stmt->bindValue('id_tiket', $data['id_tiket'], PDO::PARAM_STR);
         $this->stmt->bindValue('id_penumpang', $data['id_penumpang'], PDO::PARAM_STR);
         $this->stmt->bindValue('stasiun_asal', $data['stasium_tujuan'], PDO::PARAM_STR);

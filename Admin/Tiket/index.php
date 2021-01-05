@@ -1,3 +1,8 @@
+<?php require_once('../../core/Tiket.php');
+require_once('../layouts/header.php');
+$tiket = new Tiket();
+?>
+
 <main>
     <div class="container-fluid">
         <h1 class="mt-4">Data Tiket</h1>
@@ -44,19 +49,18 @@
                             </tr>
                         </tfoot>
                         <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>PRM133143</td>
-                                <td>solo balapan</td>
-                                <td>lempuyangan</td>
-                                <td>pramex13</td>
-                                <td>12.00</td>
-                                <td>14.15</td>
-                                <td>2jam 15menit</td>
-                                <td>Rp50.000</td>
-                                <td>tersedia</td>
-                                <td>15</td>
-                            </tr>
+                            <?php foreach ($tiket->fetchAll() as $item): ?>
+                                <tr>
+                                    <td><?= $item->nama_penumpang ?></td>
+                                    <td><?= $item->nama_penumpang ?></td>
+                                    <td><?= $item->nama_penumpang ?></td>
+                                    <td><?= $item->nama_penumpang ?></td>
+                                    <td><?= $item->nama_penumpang ?></td>
+                                    <td><?= $item->nama_penumpang ?></td>
+                                    <td><?= $item->nama_penumpang ?></td>
+                                    <td><?= $item->nama_penumpang ?></td>
+                                </tr>
+                            <?php endforeach ?>
                         </tbody>
                     </table>
                 </div>
@@ -64,3 +68,4 @@
         </div>
     </div>
 </main>
+<?php require '../layouts/footer.php'?>
