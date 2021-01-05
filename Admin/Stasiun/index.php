@@ -5,7 +5,7 @@ $stasiun = new Stasiun();
 // Tambah data
 if (isset($_POST['tambahStasiun'])):
     if ($stasiun->insert($_POST)):?>
-    <div class="stasiun-success" data-isi="<?= $_POST['pesan'] ?>"></div>
+    <div class="stasiun-success" isidata-="<?= $_POST['pesan'] ?>"></div>
     <?php else: ?>
     <div class="stasiun-fail" data-isi="Gagal Ditambahkan!"></div>
     <?php endif;
@@ -41,6 +41,7 @@ endif; ?>
                 Data Stasiun
             </div>
             <div class="card-body">
+                <!-- Button buat tambah data -->
                 <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#stasiunModal">Tambah Data Stasiun</button>
                 <div class="table-responsive">
                     <table class="table table-bordered table-dark" id="dataTable">
