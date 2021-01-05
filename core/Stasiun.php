@@ -1,5 +1,7 @@
 <?php require_once('Database.php');
 
+
+// MODEL => Mewakili tabel di database
 class Stasiun extends Database {
 
     /**

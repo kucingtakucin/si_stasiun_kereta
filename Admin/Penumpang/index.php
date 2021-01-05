@@ -1,6 +1,11 @@
 <?php require_once('../../core/Penumpang.php');
-require "../layouts/header.php";
+require_once '../../core/Stasiun.php';
+require_once '../../core/Kereta.php';
+require_once "../layouts/header.php";
+
 $penumpang = new Penumpang();
+$stasiun = new Stasiun();
+$kereta = new Kereta();
 
 // Tambah data
 if (isset($_POST['tambahPenumpang'])):
@@ -46,7 +51,7 @@ endif;
                 <!-- Button buat tambah data -->
                 <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#penumpangModal">Tambah Data Penumpang</button>
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered table-dark table-striped" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -54,6 +59,8 @@ endif;
                                 <th>Nama Penumpang</th>
                                 <th>NIK</th>
                                 <th>Nama Kereta</th>
+                                <th>Stasiun Keberangkatan</th>
+                                <th>Stasiun Tujuan</th>
                                 <th>Tanggal Lahir</th>
                                 <th> ~ </th>
                             </tr>
@@ -65,6 +72,8 @@ endif;
                                 <th>Nama Penumpang</th>
                                 <th>NIK</th>
                                 <th>Nama Kereta</th>
+                                <th>Stasiun Keberangkatan</th>
+                                <th>Stasiun Tujuan</th>
                                 <th>Tanggal Lahir</th>
                                 <th> ~ </th>
                             </tr>
@@ -77,6 +86,8 @@ endif;
                                     <td><?= $data->nama_penumpang ?></td>
                                     <td><?= $data->NIK ?></td>
                                     <td><?= $data->nama_kereta ?></td>
+                                    <td><?= $data->berangkat ?></td>
+                                    <td><?= $data->tiba ?></td>
                                     <td><?= $data->tgl_lahir ?></td>
                                     <td>
                                         <a href="edit.php?id_penumpang=<?= $data->id_penumpang ?>" class="btn btn-warning">Edit</a>
@@ -119,13 +130,51 @@ endif;
                     <div class="form-group">
                         <label for="id_kereta">Nama Kereta</label>
                         <select id="id_kereta" class="form-control custom-select" name="id_kereta" >
-                            <option value="1">Thomas</option>
+                            <?php foreach ($kereta->fetchAll() as $item): ?>
+                                <option value="<?= $item->id_kereta ?>"><?= $item->nama_kereta ?></option>
+                            <?php endforeach ?>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="id_stasiun">Nama Stasiun</label>
-                        <select id="id_stasiun" class="form-control custom-select" name="id_stasiun" >
-                            <option value="1">Solo Balapan</option>
+                        <label for="id_stasiun">Stasiun Keberangkatan</label>
+                        <select id="id_stasiun" class="form-control custom-select" name="id_stasiun_keberangkatan" >
+                            <!--
+                            [
+                                {
+                                    nama_stasiun: "...".
+                                    alamat_stasiun: "..."
+                                },
+                                {
+                                    nama_stasiun: "...".
+                                    alamat_stasiun: "..."
+                                },
+                            ]
+                            -->
+
+                            <?php foreach($stasiun->fetchAll() as $item ): ?>
+                                <option value="<?= $item->id_stasiun ?>"><?= $item->nama_stasiun ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_stasiun">Stasiun Tujuan</label>
+                        <select id="id_stasiun" class="form-control custom-select" name="id_stasiun_tiba" >
+                            <!--
+                            [
+                                {
+                                    nama_stasiun: "...".
+                                    alamat_stasiun: "..."
+                                },
+                                {
+                                    nama_stasiun: "...".
+                                    alamat_stasiun: "..."
+                                },
+                            ]
+                            -->
+
+                            <?php foreach($stasiun->fetchAll() as $item ): ?>
+                                <option value="<?= $item->id_stasiun ?>"><?= $item->nama_stasiun ?></option>
+                            <?php endforeach ?>
                         </select>
                     </div>
                     <div class="form-group">

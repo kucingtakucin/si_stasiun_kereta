@@ -5,7 +5,7 @@ $stasiun = new Stasiun();
 // Tambah data
 if (isset($_POST['tambahStasiun'])):
     if ($stasiun->insert($_POST)):?>
-    <div class="stasiun-success" isidata-="<?= $_POST['pesan'] ?>"></div>
+        <div class="stasiun-success" data-isi="<?= $_POST['pesan'] ?>"></div>
     <?php else: ?>
     <div class="stasiun-fail" data-isi="Gagal Ditambahkan!"></div>
     <?php endif;
@@ -28,6 +28,7 @@ if (isset($_POST['hapusStasiun'])):
         <div class="stasiun-fail" data-isi="Gagal Dihapus!"></div>
     <?php endif;
 endif; ?>
+
 <main>
     <div class="container-fluid">
         <h1 class="mt-4">Data Stasiun</h1>
@@ -44,7 +45,7 @@ endif; ?>
                 <!-- Button buat tambah data -->
                 <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#stasiunModal">Tambah Data Stasiun</button>
                 <div class="table-responsive">
-                    <table class="table table-bordered table-dark" id="dataTable">
+                    <table class="table table-bordered table-dark table-striped" id="dataTable">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -117,4 +118,5 @@ endif; ?>
         </div>
     </div>
 </div>
+
 <?php require_once('../layouts/footer.php') ?>

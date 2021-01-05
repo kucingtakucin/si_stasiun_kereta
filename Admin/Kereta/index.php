@@ -44,7 +44,7 @@ endif; ?>
                 <div class="card-body">
                     <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#keretaModal">Tambah Data Kereta</button>
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-bordered table-dark table-striped" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -85,6 +85,7 @@ endif; ?>
             </div>
         </div>
     </main>
+
 <!-- Modal -->
 <div class="modal fade" id="keretaModal" tabindex="-1" aria-labelledby="keretaModalLabel" aria-hidden="true">
     <div class="modal-dialog">
